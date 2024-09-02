@@ -7,6 +7,8 @@
  * @package cissabi
  */
 
+$contact_page = get_fields(); // Retrieve all ACF fields for the current post/page
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -22,9 +24,7 @@
                         </div>
                         <div class="col-8">
                             <h4>LOCATION</h4>
-                            <p>Contituency Office Location, Nyandarua County Commissioners grounds
-Olkalou-Gilgil Road
-</p>
+                            <p><?php echo esc_html($contact_page['office_location']); ?></p>
                         </div>
                     </div>
                     <div class="row">
@@ -33,7 +33,7 @@ Olkalou-Gilgil Road
                         </div>
                         <div class="col-8">
                             <h4>PHONE</h4>
-                            <a href="telto:"></a>
+                            <a href="tel:<?php echo esc_attr($contact_page['office_phone_number']); ?>"><?php echo esc_html($contact_page['office_phone_number']); ?></a>
                         </div>
                     </div>
                     <div class="row border-0">
@@ -42,7 +42,7 @@ Olkalou-Gilgil Road
                         </div>
                         <div class="col-8">
                             <h4>Email</h4>
-                            <a href="mailto:cdfolkalou@ngcdf.go.ke">cdfolkalou@ngcdf.go.ke</a>
+                            <a href="mailto:<?php echo esc_attr($contact_page['email']); ?>"><?php echo esc_html($contact_page['email']); ?></a>
                         </div>
                     </div>
 
@@ -64,7 +64,7 @@ Olkalou-Gilgil Road
         </div>
         <div class="row">
             <div class="col-md-12">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.09131655272!2d36.368222221919254!3d-0.27360573926108395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1829b8e1f1bc200b%3A0xc99c9a687005570c!2sOl%20Kalou!5e0!3m2!1sen!2ske!4v1626866602181!5m2!1sen!2ske" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+               <?php echo($contact_page['office_location_map']); ?>
             </div>     
         </div>
         
