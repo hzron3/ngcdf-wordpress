@@ -42,7 +42,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 ">
-            <h3 class="section-title">County Assembly Wards in :</h3>
+            <h3 class="section-title">County Assembly Wards:</h3>
         </div>
     </div>
     &nbsp; 
