@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Define the base directory where the WordPress site is located
-BASE_DIR="/opt/lampp/htdocs/"
+BASE_DIR="/var/www/"
 
 # Define the path to the GitHub php file
 GITHUB_php_URL="https://raw.githubusercontent.com/hzron3/ngcdf-wordpress/main/content-page-about-us.php"
 
 # Define the relative path to the php file in the WordPress site's styles folder
-php_FILE_PATH="wp-content/themes/cdf_constituency/template-parts/content-page-about-us.php"
+php_FILE_PATH="public_html/wp-content/themes/cdf_constituency/template-parts/content-page-about-us.php"
 
 # Check if the base directory is empty
 if [ -z "$(ls -A $BASE_DIR)" ]; then
