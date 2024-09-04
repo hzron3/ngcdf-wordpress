@@ -7,6 +7,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
+                            <h3><?php echo $about_us_page['constituency_name']; ?></h3>
                             <div class="about-page-section">
                                 <?php echo $about_us_page['about_us_content']; ?>
                             </div>
@@ -41,7 +42,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 ">
-            <h3 class="section-title">County Assembly Wards</h3>
+            <h3 class="section-title">County Assembly Wards in <?php echo $about_us_page['constituency_name']; ?> :</h3>
         </div>
     </div>
     &nbsp; 
